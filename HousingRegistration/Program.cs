@@ -23,7 +23,8 @@ namespace HousingRegistration
                 return;
             }
 
-            if (login.Trim().Length < 3 || login.Trim().Length > 50)
+            login = login.Trim();
+            if (login.Length < 3 || login.Length > 50)
             {
                 Console.WriteLine("Логин должен содержать от 3 до 50 символов.");
                 return;
@@ -33,14 +34,14 @@ namespace HousingRegistration
             {
                 using (HousingContext db = new HousingContext())
                 {
-                    HousingAccount account = db.Accounts.SingleOrDefault(a => a.AccountNumber == accountNumber.Trim());
+                    Account account = db.Accounts.FirstOrDefault(a => a.AccountNumber == accountNumber.Trim());
                     if (account == null)
                     {
                         Console.WriteLine("Лицевой счет не найден.");
                         return;
                     }
 
-                    if (db.Users.Any(u => u.Login == login.Trim()))
+                    if (db.Users.Any(u => u.Login == login))
                     {
                         Console.WriteLine("Такой логин уже занят.");
                         return;
@@ -53,15 +54,15 @@ namespace HousingRegistration
                     }
 
                     string passwordHash = PasswordHasher.HashPassword(password);
-                    RegisteredUser user = new RegisteredUser
+                    User user = new User
                     {
                         AccountID = account.AccountID,
-                        Login = login.Trim(),
+                        Login = login,
                         PasswordHash = passwordHash,
                         CreatedAt = DateTime.Now
                     };
 
-                    db.Users.Add(user);
+                    db.Users.AddObject(user);
                     db.SaveChanges();
                     Console.WriteLine("Учетная запись добавлена.");
                     Console.WriteLine("Хэш пароля: " + passwordHash);
