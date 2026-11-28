@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Diagrams>
+      <Diagram DiagramId="bbde8031021746808761e66388cc2958" Name="HousingDb" ZoomLevel="85">
+        <EntityTypeShape EntityType="HousingRegistration.Model.Building" Width="1.65" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HousingRegistration.Model.Apartment" Width="1.65" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HousingRegistration.Model.Account" Width="1.65" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HousingRegistration.Model.User" Width="1.65" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HousingRegistration.Model.BudgetReceipt" Width="1.65" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HousingRegistration.Model.Repair" Width="1.65" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HousingRegistration.Model.Charge" Width="1.65" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HousingRegistration.Model.Payment" Width="1.65" PointX="7.5" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HousingRegistration.Model.Employee" Width="1.65" PointX="3" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HousingRegistration.Model.Service" Width="1.65" PointX="5.25" PointY="6.25" IsExpanded="true" />
+        <AssociationConnector Association="HousingRegistration.Model.FK__Accounts__Apartm__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="HousingRegistration.Model.FK__Charges__Account__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="HousingRegistration.Model.FK__Payments__Accoun__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="HousingRegistration.Model.FK_Users_Accounts" ManuallyRouted="false" />
+        <AssociationConnector Association="HousingRegistration.Model.FK__Apartment__Build__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="HousingRegistration.Model.FK__BudgetRec__Build__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="HousingRegistration.Model.FK__Repairs__Buildin__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="HousingRegistration.Model.FK__Charges__Service__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="HousingRegistration.Model.FK__Repairs__Employe__571DF1D5" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

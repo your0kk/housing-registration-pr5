@@ -1,4 +1,5 @@
-<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
   <edmx:Runtime>
     <edmx:StorageModels>
       <Schema Namespace="HousingRegistration.Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
@@ -717,8 +718,20 @@
     </edmx:Mappings>
   </edmx:Runtime>
   <edmx:Designer>
-    <edmx:DesignerInfoPropertySet>
-      <edmx:DesignerProperty Name="ConnectionString" Value="metadata=res://*/HousingRegistration.Model.HousingDb.csdl|res://*/HousingRegistration.Model.HousingDb.ssdl|res://*/HousingRegistration.Model.HousingDb.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=PC\SQLEXPRESS;initial catalog=HousingManagementDB;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" />
-    </edmx:DesignerInfoPropertySet>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="false" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <edmx:DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <edmx:DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
+    <edmx:Diagrams />
   </edmx:Designer>
 </edmx:Edmx>
